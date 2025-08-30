@@ -490,7 +490,7 @@ def run_perplexity(prompt: str, use_research_mode: bool = False):
     driver = None
     try:
         # Initialize driver with UC mode and Chrome debug profile
-        profile_dir = os.getenv("CHROME_PROFILE_DIR", "./chrome-debug-4")
+        profile_dir = os.getenv("CHROME_PROFILE_DIR", "./chrome-debug")
         driver = Driver(
             uc=True, 
             headless=False,
