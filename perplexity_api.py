@@ -473,7 +473,7 @@ def getResult(driver):
                         driver.sleep(1)
             
             if clipboard_content:
-                cleaned_citation_string = clipboard_content #clipboard_content.split("[1]")[0] if clipboard_content else ""
+                cleaned_citation_string = clipboard_content.split("[1](")[0] if clipboard_content else ""
                 print(f"[PERPLEXITY] ✓ Successfully retrieved clipboard content ({len(cleaned_citation_string)} chars)")
                 return cleaned_citation_string
             else:
